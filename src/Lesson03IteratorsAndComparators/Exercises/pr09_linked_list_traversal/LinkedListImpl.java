@@ -88,11 +88,24 @@ public class LinkedListImpl<T extends Comparable<T>> implements LinkedList<T> {
     }
 
     @Override
+    public Iterator<T> reverseIterator() {
+        return new LinkedListReverseIterator();
+    }
+
+    @Override
     public void forEach(Consumer<? super T> action) {
         Node<T> current = this.head;
         while (current != null) {
             action.accept(current.value);
             current = current.getNext();
+        }
+    }
+
+    @Override
+    public void forEachReversed(Consumer<? super T> action) {
+        Iterator<T> it = reverseIterator();
+        while (it.hasNext()) {
+            action.accept(it.next());
         }
     }
 
@@ -157,6 +170,27 @@ public class LinkedListImpl<T extends Comparable<T>> implements LinkedList<T> {
         public T next() {
             T value = next.value;
             next = next.getNext();
+            return value;
+        }
+    }
+
+    private final class LinkedListReverseIterator implements Iterator<T> {
+
+        private Node<T> next;
+
+        public LinkedListReverseIterator() {
+            next = tail;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return next != null;
+        }
+
+        @Override
+        public T next() {
+            T value = next.value;
+            next = next.getPrev();
             return value;
         }
     }
