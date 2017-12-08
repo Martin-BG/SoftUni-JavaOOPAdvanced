@@ -41,9 +41,14 @@ public class Main {
         list.add(2);
         list.add(3);
         list.add(4);
+        list.add(5);
         list.add(1);
         System.out.println(list);
         System.out.println(list.getSize());
+
+        list.forEachReversed(System.out::print);
+        System.out.println();
+
         list.remove(1);
         list.remove(1);
         list.remove(1);
