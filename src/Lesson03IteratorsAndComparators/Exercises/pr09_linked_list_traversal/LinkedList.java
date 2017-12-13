@@ -12,6 +12,10 @@ public interface LinkedList<T extends Comparable<T>> extends Iterable<T> {
 
     void remove(T value);
 
+    T getLast();
+
+    T getFirst();
+
     Iterator<T> reverseIterator();
 
     void forEachReversed(Consumer<? super T> action);

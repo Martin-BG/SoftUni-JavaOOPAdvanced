@@ -71,6 +71,16 @@ public class LinkedListImpl<T extends Comparable<T>> implements LinkedList<T> {
         }
     }
 
+    @Override
+    public T getLast() {
+        return this.tail == null ? null : this.tail.value;
+    }
+
+    @Override
+    public T getFirst() {
+        return this.head == null ? null : this.head.value;
+    }
+
     private Node<T> findFirst(T value) {
         Node<T> current = this.head;
         while (current != null) {
