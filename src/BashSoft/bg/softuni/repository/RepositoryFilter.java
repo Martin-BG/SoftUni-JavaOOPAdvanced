@@ -37,14 +37,14 @@ public class RepositoryFilter {
 
     private Predicate<Double> createFilter(String filterType) {
         switch (filterType) {
-            case "excellent":
-                return mark -> mark >= 5.0;
-            case "average":
-                return mark -> 3.5 <= mark && mark < 5.0;
-            case "poor":
-                return mark -> mark < 3.5;
-            default:
-                return null;
+        case "excellent":
+            return mark -> mark >= 5.0;
+        case "average":
+            return mark -> 3.5 <= mark && mark < 5.0;
+        case "poor":
+            return mark -> mark < 3.5;
+        default:
+            return null;
         }
     }
 }
