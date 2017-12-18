@@ -19,7 +19,7 @@ public class ModuleContainerTest {
     @Before
     public void setUp() {
         this.container = new ModuleContainer(3);
-        this.energyModule1 = Mockito.mock(ExamPreparation01.cresla.interfaces.EnergyModule.class);
+        this.energyModule1 = Mockito.mock(EnergyModule.class);
         this.energyModule2 = Mockito.mock(EnergyModule.class);
         this.absorbingModule1 = Mockito.mock(AbsorbingModule.class);
         this.absorbingModule2 = Mockito.mock(AbsorbingModule.class);
