@@ -6,7 +6,7 @@ import Lesson01InterfacesAndAbstraction.Lab.pr03_car_shop_extend.contracts.Sella
 import Lesson01InterfacesAndAbstraction.Lab.pr03_car_shop_extend.model.Audi;
 import Lesson01InterfacesAndAbstraction.Lab.pr03_car_shop_extend.model.Seat;
 
-public class CarShopExtendDemo {
+public class Main {
 
 
     public static void main(String[] args) {

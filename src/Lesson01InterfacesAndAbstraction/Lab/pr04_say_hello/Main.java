@@ -8,7 +8,7 @@ import Lesson01InterfacesAndAbstraction.Lab.pr04_say_hello.model.European;
 import java.util.ArrayList;
 import java.util.List;
 
-class SeyHelloDemo {
+class Main {
 
     public static void main(String[] args) {
         List<Person> persons = new ArrayList<>();
