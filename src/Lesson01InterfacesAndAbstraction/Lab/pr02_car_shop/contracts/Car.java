@@ -2,7 +2,7 @@ package Lesson01InterfacesAndAbstraction.Lab.pr02_car_shop.contracts;
 
 public interface Car {
 
-    int TIRES = 4;
+    int TYRES = 4;
 
     String getModel();
 

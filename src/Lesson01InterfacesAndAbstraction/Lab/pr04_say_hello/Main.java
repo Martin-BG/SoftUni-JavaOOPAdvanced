@@ -18,11 +18,7 @@ class Main {
         persons.add(new Chinese("Pesho"));
 
         for (Person person : persons) {
-            print(person);
+            System.out.println(person.sayHello());
         }
-    }
-
-    private static void print(Person person) {
-        person.sayHello();
     }
 }
